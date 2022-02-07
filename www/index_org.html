@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!-- saved from url=(0073)https://lets-csharp.com/wp-content/uploads/2021/02/shooting-game-threejs/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>3Dの縦スクロールシューティングゲーム</title>
+
+<script src="./js/three.min.js"></script>
+<script type="text/javascript" src="./js/jquery.min.js"></script>
+<style>
+#container {
+	background-color: #000;
+	width:600px;
+	height:450px;
+}
+</style>
+</head>
+<body>
+
+<div id="container">
+<div><canvas id="HeaderCanvas" width="600" height="40"></canvas></div>
+<div><canvas id="MainCanvas" width="900" height="570" style="width: 600px; height: 380px;"></canvas></div>
+<div><canvas id="FooterCanvas" width="600" height="30"></canvas></div>
+<div>
+
+<script src="./js/data-url.js"></script>
+<script src="./js/sound.js"></script>
+<script src="./js/game-character.js"></script>
+<script src="./js/explosion.js"></script>
+<script src="./js/jiki.js"></script>
+<script src="./js/enemy.js"></script>
+<script src="./js/app.js"></script>
+
+
+<label>ハンドルネーム 16文字まで</label>
+<input type="text" id="name" maxlength="16">
+<p style="font-weight:bold; font-size:1.2em;">
+ランキング機能を追加しました（2021/07/19） <a href="https://lets-csharp.com/wp-content/uploads/2021/02/shooting-game-threejs/high-score.html" target="_blank">トップ10を見る</a>
+</p>
+
+</div></body></html>
