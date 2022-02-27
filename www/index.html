@@ -7,6 +7,7 @@
 	<script src="components/loader.js"></script>
 	<link rel="stylesheet" href="./components/loader.css">
 	<script src="components/monaca-onsenui/js/onsenui.min.js" type="text/javascript"></script>
+	<script src="./js/three.min.js"></script>
 	<link rel="stylesheet" href="components/loader.css">
 	<link rel="stylesheet" href="components/monaca-onsenui/css/onsenui.css">
 	<link rel="stylesheet" href="components/monaca-onsenui/css/onsen-css-components.css">
@@ -22,53 +23,49 @@
 		);
 	</script>
 	<style>
-		section.page-title{
-			padding: 8px;
+		#gcontainer{
+			position: relative;
+			width: 100%;
+			height: 100%;
 		}
-		section.page-body{
-			padding: 8px;
+		#gcontainer div.gheader,
+		#gcontainer div.gmain,
+		#gcontainer div.gfooter{
+			position: fixed;
+			left: 0;
+			width: 100%;
+		}
+		#gcontainer div.gheader{
+			top: 0;
+			height: 2rem;
+		}
+		#gcontainer div.gmain{
+			top: 0;
+			height: 100%;
+		}
+		#gcontainer div.gfooter{
+			bottom: 0;
+			height: 2rem;
+		}
+		#gcontainer canvas{
+			vertical-align: bottom;
+			width: 100%;
+			height: 100%;
 		}
 	</style>
 </head>
 <body>
-	<ons-navigator title="Navigator" id="navigator1">
-		<ons-template id="page01">
-			<ons-page>
-				<ons-toolbar>
-					<div class="center">Page 01</div>
-				</ons-toolbar>
-				<section class="page-title">
-					<p>※ 最初のページです。</p>
-				</section>
-				<section class="page-body">
-					<ons-button modifier="light" onclick="goPage('page2');">次に移動</ons-button>
-				</section>
-			</ons-page>
-		</ons-template>
-	</ons-navigator>
-    <ons-navigator animation="slide" var="app.navi">
-      <ons-page>
- <ons-toolbar>
-      <div class="center">Title</div>
-    </ons-toolbar>
-
-    <p style="text-align: center">
-      <ons-button modifier="light" ng-click="app.navi.pushPage('page.html');">Push</ons-button>
-    </p>
-  </ons-page>
-</ons-navigator>
-
-<ons-template id="page.html">
-  <ons-page>
-    <ons-toolbar>
-      <div class="center">Title</div>
-    </ons-toolbar>
-
-    <p style="text-align: center">
-      <ons-button modifier="light" ng-click="app.navi.popPage('page.html');">Pop</ons-button>
-    </p>
-  </ons-page>
-</ons-template>
-実例
+	<div id="gcontainer">
+		<div class="gmain"><canvas id="gmain"></canvas></div>
+		<div class="gheader"><canvas id="gheader"></canvas></div>
+		<div class="gfooter"><canvas id="gfooter"></canvas></div>
+	<div>
+	<script src="./js/data-url.js"></script>
+	<script src="./js/sound.js"></script>
+	<script src="./js/game-character.js"></script>
+	<script src="./js/explosion.js"></script>
+	<script src="./js/jiki.js"></script>
+	<script src="./js/enemy.js"></script>
+	<script src="./js/app.js"></script>
 </body>
 </html>
